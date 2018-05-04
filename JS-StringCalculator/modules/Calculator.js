@@ -8,7 +8,7 @@ class Calculator {
       return 0;
     }
 
-    let numbers = input.split(",");
+    let numbers = input.split(/[\n,]/);
 
     let sum = numbers.reduce((a, b)=>{ return parseInt(a) + parseInt(b)});
 

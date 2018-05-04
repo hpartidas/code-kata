@@ -29,5 +29,11 @@ describe("Calculator", () => {
         expect(c.add("2,10")).to.equal(12);
       });
     });
+
+    describe("when input contains new line as delimiter", () => {
+      it("is expected to return the sum of the input", () => {
+        expect(c.add("2\n10,13")).to.equal(25);
+      });
+    });
   });
 });
