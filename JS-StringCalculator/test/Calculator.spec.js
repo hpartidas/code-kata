@@ -35,5 +35,11 @@ describe("Calculator", () => {
         expect(c.add("2\n10,13")).to.equal(25);
       });
     });
+
+    describe("when input contains different delimiters", () => {
+      it("is expected to return the sum of the input", () => {
+        expect(c.add("1|2|3,4;\n5\n6")).to.equal(21);
+      });
+    });
   });
 });

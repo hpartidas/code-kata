@@ -8,9 +8,26 @@ class Calculator {
       return 0;
     }
 
-    let numbers = input.split(/[\n,]/);
+    let numbers = input.split(/[\n,;|]/);
 
-    let sum = numbers.reduce((a, b)=>{ return parseInt(a) + parseInt(b)});
+    let sum = numbers.reduce((a, b) => {
+      a = parseInt(a);
+      b = parseInt(b);
+
+      if (isNaN(a) && isNaN(b)) {
+        return 0;
+      }
+
+      if (isNaN(a)) {
+        return b;
+      }
+
+      if (isNaN(b)) {
+        return a;
+      }
+
+      return parseInt(a) + parseInt(b)
+    });
 
     return parseInt(sum);
   }
