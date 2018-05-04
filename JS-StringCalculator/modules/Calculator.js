@@ -1,9 +1,7 @@
 'use strict';
 
 class Calculator {
-  constructor() {
-    //this.read = this.read.bind(this);
-  }
+  constructor() {}
 
   add(input) {
     if (input === "") {
@@ -11,10 +9,6 @@ class Calculator {
     }
 
     let numbers = input.split(",");
-
-    if (numbers.length > 2) {
-      return false;
-    }
 
     let sum = numbers.reduce((a, b)=>{ return parseInt(a) + parseInt(b)});
 

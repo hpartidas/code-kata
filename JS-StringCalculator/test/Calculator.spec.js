@@ -18,9 +18,9 @@ describe("Calculator", () => {
       });
     });
 
-    describe("when input has more than 2 numbers", () => {
-      it("is expected to fail", () => {
-        expect(c.add("1,2,3")).to.equal(false);
+    describe("when input has an unknown number of numbers", () => {
+      it("is expected to succeed", () => {
+        expect(c.add("1,2,3,4,5,6,7,8,9,10,11,12,13")).to.equal(91);
       });
     });
 
