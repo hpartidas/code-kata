@@ -41,5 +41,11 @@ describe("Calculator", () => {
         expect(c.add("1|2|3,4;\n5\n6")).to.equal(21);
       });
     });
+
+    describe("when input contains numbers greater than 1000", () => {
+      it("is expected to return the sum of numbers lesser than 1000", () => {
+        expect(c.add("100,200,1001,100,200,1001")).to.equal(600);
+      });
+    });
   });
 });

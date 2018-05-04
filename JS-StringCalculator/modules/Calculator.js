@@ -26,10 +26,26 @@ class Calculator {
         return a;
       }
 
+      if (this.isGreaterThan1000(a) && this.isGreaterThan1000(b)) {
+        return 0;
+      }
+
+      if (this.isGreaterThan1000(a)) {
+        return b;
+      }
+
+      if (this.isGreaterThan1000(b)) {
+        return a;
+      }
+
       return parseInt(a) + parseInt(b)
     });
 
     return parseInt(sum);
+  }
+
+  isGreaterThan1000(a) {
+    return a >= 1000;
   }
 }
 
